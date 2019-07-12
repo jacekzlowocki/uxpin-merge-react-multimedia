@@ -65,6 +65,10 @@ class YouTubePlayer extends React.Component {
       },
     };
 
+    if (!videoId) {
+      return null;
+    }
+
     return (
       <YouTube
         onEnd={onEnd}
