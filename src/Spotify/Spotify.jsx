@@ -13,7 +13,7 @@ class Spotify extends React.Component {
 
     const size = { width: '100%', height };
 
-    if (!uri) {
+    if (!uri || !uri.trim().length) {
       return null;
     }
 
