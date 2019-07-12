@@ -5,10 +5,15 @@ import YouTube from 'react-youtube';
 const parseBoolToInt = (bool) => bool ? 1 : 0;
 
 const getVideoIdFromUrl = (url) => {
-  const urlObject = new URL(url);
-  const id = urlObject.searchParams.get('v');
+  try {
+    const urlObject = new URL(url);
+    const id = urlObject.searchParams.get('v');
 
-  return id || '';
+    return id || '';
+  } catch (e) {
+    console.log('Invalid URL:', url, e);
+    return '';
+  }
 };
 
 class YouTubePlayer extends React.Component {
