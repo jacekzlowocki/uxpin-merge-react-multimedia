@@ -1,12 +1,15 @@
 {
   "devDependencies": {
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
     "@uxpin/merge-cli": "^2.2.2",
     "babel-loader": "^8.0.6",
-    "proptypes": "^1.1.0",
-    "react": "^16.8.6",
     "webpack": "^4.35.3"
   },
   "dependencies": {
+    "proptypes": "^1.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-spotify-player": "^1.0.4",
     "react-youtube": "^7.9.0"
   }
