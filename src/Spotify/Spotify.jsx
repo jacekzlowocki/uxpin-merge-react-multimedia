@@ -13,6 +13,10 @@ class Spotify extends React.Component {
 
     const size = { width: '100%', height };
 
+    if (!uri) {
+      return null;
+    }
+
     return (
       <SpotifyPlayer
         uri={uri}

@@ -4,6 +4,13 @@ import YouTube from 'react-youtube';
 
 const parseBoolToInt = (bool) => bool ? 1 : 0;
 
+const getVideoIdFromUrl = (url) => {
+  const urlObject = new URL(url);
+  const id = urlObject.searchParams.get('v');
+
+  return id || '';
+};
+
 class YouTubePlayer extends React.Component {
   constructor(props) {
     super(props);
@@ -36,9 +43,11 @@ class YouTubePlayer extends React.Component {
       onEnd,
       onPause,
       onPlay,
-      videoId,
+      videoUrl,
       width,
     } = this.props;
+
+    const videoId = getVideoIdFromUrl(videoUrl);
 
     const opts = {
       height,
@@ -65,7 +74,7 @@ class YouTubePlayer extends React.Component {
 }
 
 YouTubePlayer.propTypes = {
-  videoId: PropTypes.string.isRequired,
+  videoUrl: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
   autoplay: PropTypes.bool,

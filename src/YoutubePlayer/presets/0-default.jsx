@@ -2,6 +2,6 @@ import * as React from 'react';
 import YouTubePlayer from '../YoutubePlayer';
 
 export default (
-  <YouTubePlayer autoplay={false} videoId="dQw4w9WgXcQ" uxpId="player1" />
+  <YouTubePlayer autoplay={false} videoUrl="https://www.youtube.com/watch?v=SQFGbPCjMN8" uxpId="player1" />
 );
 
