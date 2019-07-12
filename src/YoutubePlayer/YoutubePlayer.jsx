@@ -15,8 +15,18 @@ class YouTubePlayer extends React.Component {
     this.onReady = this.onReady.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  shouldComponentUpdate(nextProps) {
     console.log('nextProps', nextProps);
+
+    if (nextProps.paused !== this.props.paused) {
+      if (nextProps.paused) {
+        this.pauseVideo();
+      } else {
+        this.playVideo();
+      }
+
+      return false;
+    }
   }
 
   playVideo() {
