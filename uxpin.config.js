@@ -4,7 +4,7 @@ module.exports = {
       {
         name: 'Multimedia',
         include: [
-          // 'src/Spotify/Spotify.jsx',
+          'src/Spotify/Spotify.jsx',
           'src/YouTubePlayer/YoutubePlayer.jsx',
         ],
       },

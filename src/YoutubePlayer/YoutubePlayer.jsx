@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'proptypes';
+import PropTypes from 'proptypes';
 import YouTube from 'react-youtube';
 
 const parseBoolToInt = (bool) => bool ? 1 : 0;
@@ -65,15 +65,15 @@ class YouTubePlayer extends React.Component {
 }
 
 YouTubePlayer.propTypes = {
-  videoId: propTypes.string.isRequired,
-  width: propTypes.number,
-  height: propTypes.number,
-  autoplay: propTypes.bool,
-  controls: propTypes.bool,
-  loop: propTypes.bool,
-  onEnd: propTypes.func,
-  onPause: propTypes.func,
-  onPlay: propTypes.func,
+  videoId: PropTypes.string.isRequired,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  autoplay: PropTypes.bool,
+  controls: PropTypes.bool,
+  loop: PropTypes.bool,
+  onEnd: PropTypes.func,
+  onPause: PropTypes.func,
+  onPlay: PropTypes.func,
 };
 
 YouTubePlayer.defaultProps = {
